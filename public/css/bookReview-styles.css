@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 10px auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.button-section {
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.button-section button {
+    margin-left: 40px;
+    padding: 15px 45px;
+    background-color: #007Bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-section button:hover {
+    background-color: #0056b3;
+}
+
+.filter-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.filter-section select {
+    padding: 15px 10px;
+    width: 350px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.review-card {
+    width: 250px;
+    height: 450px;
+    border: 1px solid #eee;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.review-link, .review-link:visited, .review-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.book-cover {
+    width: 250px;
+    height: 350px;
+    display: block;
+    margin: 0 auto 10px;
+    border-radius: 5px;
+}
+
+.review-card h2 {
+    font-size: 18px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.review-card h3 {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+}   

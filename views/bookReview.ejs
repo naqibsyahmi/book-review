@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bookReview-styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Book Reviews</h1>
+
+        <!-- Add Book Review Button -->
+        <div class="button-section">
+            <button onclick="location.href='/addBookReview'">Add Book Review</button>
+        </div>
+
+        <!-- Filter Selection -->
+        <div class="filter-section">
+            <select id="filter" onchange="filterBookReviewByOrder()">
+                <option value="noFilter"
+                    <% if (currentFilter === "noFilter")  { %> selected <% } %>>
+                No Filter
+            </option>
+
+                <option value="ascOrder"
+                    <% if (currentFilter === "ascOrder") { %> selected <% } %>>
+                Ascending Order
+            </option>
+
+                <option value="descOrder"
+                    <% if (currentFilter === "descOrder") { %> selected <% } %>>
+                Descending Order
+            </option>
+        </select>
+    </div>
+
+        <!-- Book reviews fetched from the database -->
+        <div class="reviews">
+            <% ReviewList.forEach(review => { %>
+            <a href="/descriptionBookReview/<%= review.id %>" class="review-link">
+                <div class="review-card">
+                    <img src="<%= review.BookImage %>" alt="<%= review.BookName %>" class="book-cover">
+                    <h2><%= review.BookName %></h2>
+                    <h3><%= review.BookAuthor %></h3>
+                </div>
+            </a>
+            <% }); %>
+        </div>
+    </div>
+    <script src="/js/filterBookReview.js"></script>
+</body>
+
+</html>

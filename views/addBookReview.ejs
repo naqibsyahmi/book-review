@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/addBookReview-styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add a Book</h1>
+
+        <form action="/submitBookReview" method="POST">
+            <div class="input-section">
+                <label for="book-title">Book Title</label>
+                <input type="text" id="book-title" name="BookName" placeholder="Enter Book Title" required>
+            </div>
+
+            <div class="input-section">
+                <label for="book-author">Author</label>
+                <input type="text" id="book-author" name="BookAuthor" placeholder="Enter Author's Name" required>
+            </div>
+
+            <div class="input-section">
+                <label for="book-cover">Book Image Link</label>
+                <input type="text" id="book-cover" name="BookImage" pattern="https?://.+(\.jpg|\.jpeg|\.png)$" placeholder="Provide the URL of the book cover">
+            </div>
+
+            <div class="input-section">
+                <label for="book-description">Book Description</label>
+                <textarea id="book-description" name="Description" rows="4" placeholder="Write your review here..." required></textarea>
+            </div>
+
+            <div class="submit-button">
+                <button type="submit">Submit</button>
+            </div>
+
+            <div class="cancel-button">
+                <button type="button" onclick="window.location.href='/'">Cancel</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

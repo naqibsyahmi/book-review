@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/descriptionBookReview-styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <button class="delete-btn">Delete</button>
+        <div class="content-section">
+            <div class="book-section">
+                <img src="<%= review.BookImage %>" alt="<%= review.BookName %>" class="book-cover">
+            </div>
+            <div class="description-section">
+                <h2><%= review.BookName %></h2>
+                <p><%= review.Description %></p>
+                <h3><span>Author of the Book:</span> <%= review.BookAuthor %></h3>
+                <div class="rating-section">
+                    <strong>Ratings:</strong> <span id="ratingValue"><%= review.rating %></span>/5
+                    <div class="stars">
+                        <img src="/images/zero-star.png" alt="Star 1" class="star" data-value="1">
+                        <img src="/images/zero-star.png" alt="Star 2" class="star" data-value="2">
+                        <img src="/images/zero-star.png" alt="Star 3" class="star" data-value="3">
+                        <img src="/images/zero-star.png" alt="Star 4" class="star" data-value="4">
+                        <img src="/images/zero-star.png" alt="Star 5" class="star" data-value="5">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment-section">
+            <h3>Review Comments</h3>
+
+            <div class="reviews-list"></div>
+
+            <div class="add-review">
+                <input type="text" placeholder="Write your review here" class="comment-input">
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/updateDescription.js"></script>
+</body>
+
+</html>
